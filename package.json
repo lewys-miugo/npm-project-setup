@@ -1,0 +1,14 @@
+{
+  "name": "dennis-npm",
+  "version": "1.0.0",
+  "description": "Simple intro",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "lewys",
+  "license": "MIT",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
