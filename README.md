@@ -22,33 +22,61 @@ To install globally
 
 JSONPlaceholder for fetching dummy data.
 JSON Server gives you a simple rest server when you don't have a backend built.
-(Json github)[]
-(npm json link)[https://www.npmjs.com/package/json-server/v/0.17.4]
+<!-- (Json github)[] -->
+(npm json link)[https://www.npmjs.com/package/json-server/v/0.17.4#getting-started]
 installing local command `npm i json-server@0.17.4`
 installing global command `npm i -g json-server@0.17.4`
 
-create file db.json
+Create a `db.json` file with some data
 
-paste this data into the db.json file
 ```
 {
-    "posts": [
-        {
-            "id": 1,
-            "title": "First Post",
-            "content": "This is the content of the first post.",
-            "author": "John Doe",
-            "date": "2023-10-01"
-        },
-        {
-            "id": 2,
-            "title": "Second Post",
-            "content": "This is the content of the second post.",
-            "author": "Jane Smith",
-            "date": "2023-10-02"
-        }
-    ]
+  "posts": [
+    { "id": 1, "title": "json-server", "author": "typicode" },
+    { "id": 2, "title": "json-server2", "author": "typicode2" },
+    { "id": 3, "title": "json-server3", "author": "typicode3" }
+  ],
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" }
 }
 ```
+Start JSON Server
+
+`json-server --watch db.json`
+
+In your `index.js` add the following to access data in your db.json
+
+```
+fetch('http://localhost:3000/posts')
+      .then(response => response.json())
+      .then(json => console.log(json))
+```
+to specify port `db.json --port 4000`
+
+`ctrl+z` pushes the process to the back ground.
+
+You don't need the --watch tag
+
+# PostMan
+
+Create a postman account (here:)[https://web.postman.co/home].
+
+Create a workspace
+On the left side menu (explore our templates) choose API testing then click next
+
+create a team by following the popups
+
+in the postman window next to getting started tab create a new tab
+
+and paste this `https://jsonplaceholder.typicode.com/todos/1`
+
+use this image for reference:
+
+![Screenshot](/assets/img/postman.png)
+
+
+Congrats!!You've tested your API.
 
 
