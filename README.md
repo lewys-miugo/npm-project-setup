@@ -79,4 +79,9 @@ use this image for reference:
 
 Congrats!!You've tested your API.
 
+Ways to access postman:
+-App
+-VS code extension
+-web
+
 
