@@ -61,7 +61,7 @@ You don't need the --watch tag
 
 # PostMan
 
-Create a postman account (here:)[https://web.postman.co/home].
+Create a postman account [here:](https://web.postman.co/home).
 
 Create a workspace
 On the left side menu (explore our templates) choose API testing then click next
@@ -83,5 +83,9 @@ Ways to access postman:
 -App
 -VS code extension
 -web
+
+# Lucide icons
+
+icons on [Lucide](https://lucide.dev/icons/)
 
 
